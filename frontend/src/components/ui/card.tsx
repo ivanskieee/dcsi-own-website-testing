@@ -29,15 +29,15 @@ export const CardTitle: React.FC<CardTitleProps> = ({ children, className, ...pr
   );
 };
 
-interface CardContentProps extends React.HTMLAttributes<HTMLParagraphElement> {
+interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> { // changed from HTMLParagraphElement
   children: React.ReactNode;
   className?: string;
 }
 
 export const CardContent: React.FC<CardContentProps> = ({ children, className, ...props }) => {
   return (
-    <p className={`text-gray-600 ${className || ""}`} {...props}>
+    <div className={`text-gray-600 ${className || ""}`} {...props}> {/* changed from <p> to <div> */}
       {children}
-    </p>
+    </div>
   );
 };
