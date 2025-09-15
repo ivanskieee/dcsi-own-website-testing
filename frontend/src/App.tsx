@@ -9,10 +9,9 @@ import { ThemeProvider, useTheme } from "@/components/theme-provider";
 import { Switch } from "@/components/ui/switch";
 
 const NavLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `px-3 py-2 rounded-md font-medium transition-colors ${
-    isActive
-      ? "bg-foreground text-background"
-      : "text-muted-foreground hover:text-foreground"
+  `px-3 py-2 rounded-md font-medium transition-colors ${isActive
+    ? "bg-foreground text-background"
+    : "text-muted-foreground hover:text-foreground"
   }`;
 
 // Dark mode toggle switch
@@ -58,9 +57,11 @@ const AppContent: React.FC = () => {
           <nav className="flex items-center justify-between h-16">
             {/* Brand */}
             <NavLink to="/" className="flex items-center">
-              <div className="rounded-md bg-foreground/5">
-                <img src={DcsiLogo} alt="DCSI Logo" className="h-15 w-15 object-contain" />
-              </div>
+              <img
+                src={DcsiLogo}
+                alt="DCSI Logo"
+                className="h-15 w-15 object-contain dark:invert"
+              />
               <div>
                 <div className="text-lg font-extrabold text-foreground">DCSI</div>
                 <div className="text-xs text-muted-foreground -mt-1">
@@ -133,7 +134,7 @@ const AppContent: React.FC = () => {
       </PageEffectsProvider>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background border-t border-muted/20">
+      <footer className="bg-background text-foreground border-t border-muted/20">
         <div className="max-w-6xl mx-auto px-4 py-6 text-sm text-muted-foreground flex flex-col md:flex-row justify-between items-center">
           <div>© {new Date().getFullYear()} DataLink Creative Solutions Incorporation</div>
           <div className="mt-3 md:mt-0">Designed by DCSI • All rights reserved</div>

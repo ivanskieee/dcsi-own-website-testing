@@ -62,7 +62,7 @@ export default function Offers() {
                       Learn More
                     </Button>
                   </Link>
-                  <Button className="px-4 py-2 bg-foreground text-background hover:bg-foreground/90 transition-colors" aria-label={`Request a quote for ${offer.title}`}>
+                  <Button className="px-4 py-2 text-background hover:bg-foreground/90 transition-colors" aria-label={`Request a quote for ${offer.title}`}>
                     Request Quote
                   </Button>
                 </div>

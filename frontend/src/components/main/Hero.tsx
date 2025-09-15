@@ -6,7 +6,7 @@ export default function Hero(): React.ReactElement {
   const { visibleSections } = usePageEffects();
 
   return (
-    <section className="relative py-20 px-4 text-center bg-foreground text-background overflow-hidden" data-section="hero">
+    <section className="relative py-20 px-4 text-center bg-background text-foreground overflow-hidden" data-section="hero">
       <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-black/10" />
       <div className="relative max-w-4xl mx-auto z-10">
         <h1

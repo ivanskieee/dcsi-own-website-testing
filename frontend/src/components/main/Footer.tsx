@@ -5,7 +5,7 @@ export default function Footer(): React.ReactElement {
   const { visibleSections } = usePageEffects();
 
   return (
-    <footer className="py-12 px-4 bg-foreground text-background border-t" data-section="footer">
+    <footer className="py-12 px-4 bg-background text-foreground border-t" data-section="footer">
       <div className={`max-w-6xl mx-auto grid md:grid-cols-4 gap-8 transition-all duration-1000 transform ${visibleSections.footer ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div>
           <h3 className="text-xl font-bold mb-4 hover:text-primary transition-colors duration-300">DataLink Creative Solutions Incorporation</h3>
